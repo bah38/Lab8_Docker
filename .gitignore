@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+*.pyc
+reference/
+*_Submission.zip
+evidence/capture-complete.txt

@@ -1,0 +1,17 @@
+PS> docker ps -a
+CONTAINER ID   IMAGE                                       COMMAND                  CREATED              STATUS                      PORTS                                             NAMES
+e55b2fc079e1   flask_docker                                "python app.py"          About a minute ago   Up 20 seconds               127.0.0.1:5000->5000/tcp                          lab8-bah38-hello
+2f0f726d5e74   mysql:8.4                                   "docker-entrypoint.sGǪ"   3 weeks ago          Up 8 minutes (healthy)      127.0.0.1:3306->3306/tcp                          security-ims-mysql-1
+6b8c7e694361   docker-frontend                             "/docker-entrypoint.GǪ"   6 months ago         Exited (255) 3 weeks ago    0.0.0.0:8080->80/tcp                              docker-frontend-1
+da91682c2351   docker-admin                                "uvicorn main:app --GǪ"   6 months ago         Exited (255) 3 weeks ago    0.0.0.0:8004->8000/tcp                            docker-admin-1
+beb04c30f39f   docker-cart                                 "uvicorn main:app --GǪ"   6 months ago         Exited (255) 3 weeks ago    0.0.0.0:8002->8000/tcp                            docker-cart-1
+76b90effd9a0   docker-catalog                              "uvicorn main:app --GǪ"   6 months ago         Exited (255) 3 weeks ago    0.0.0.0:8001->8000/tcp                            docker-catalog-1
+7ee94dd01a0f   docker-auth                                 "uvicorn main:app --GǪ"   6 months ago         Exited (255) 3 weeks ago    0.0.0.0:8005->8000/tcp                            docker-auth-1
+4a811b5bdd8f   docker-checkout                             "uvicorn main:app --GǪ"   6 months ago         Exited (255) 3 weeks ago    0.0.0.0:8003->8000/tcp                            docker-checkout-1
+98656c8cc2d4   postgres:16                                 "docker-entrypoint.sGǪ"   6 months ago         Exited (255) 3 weeks ago    0.0.0.0:5432->5432/tcp                            docker-postgres-1
+fb0f2106525d   redis:7-alpine                              "docker-entrypoint.sGǪ"   6 months ago         Exited (255) 3 weeks ago    0.0.0.0:6379->6379/tcp                            docker-redis-1
+9c0666e23f77   localstack/localstack:3.0                   "docker-entrypoint.sh"   6 months ago         Exited (255) 3 weeks ago    4510-4559/tcp, 5678/tcp, 0.0.0.0:4566->4566/tcp   docker-localstack-1
+b2db1d499938   ghcr.io/batoul-hachem/batoulhachem:latest   "sh -c 'python managGǪ"   7 months ago         Exited (137) 7 months ago                                                     gracious_mestorf
+e5aa5a139980   ghcr.io/batoul-hachem/batoulhachem:latest   "sh -c 'python managGǪ"   7 months ago         Exited (137) 7 months ago                                                     bold_lumiere
+18abbb2cb395   volleyball-app                              "sh -c 'python managGǪ"   7 months ago         Exited (137) 7 months ago                                                     vigilant_mcnulty
+

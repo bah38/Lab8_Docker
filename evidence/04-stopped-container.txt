@@ -1,0 +1,4 @@
+PS> docker ps -a --filter name=lab8-bah38-hello
+CONTAINER ID   IMAGE          COMMAND           CREATED              STATUS                       PORTS     NAMES
+e55b2fc079e1   flask_docker   "python app.py"   About a minute ago   Exited (137) 4 seconds ago             lab8-bah38-hello
+
