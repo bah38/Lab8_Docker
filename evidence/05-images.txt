@@ -1,6 +1,6 @@
 PS> docker image ls --filter reference=bah38/lab8-batoul_hachem
 WARNING: This output is designed for human readability. For machine-readable output, please use --format.
 IMAGE                                    ID             DISK USAGE   CONTENT SIZE   EXTRA
-bah38/lab8-batoul_hachem:0.0.1.RELEASE   9975f4e127e7       94.6MB         23.1MB        
-bah38/lab8-batoul_hachem:0.0.2.RELEASE   44d6ef9728aa       94.5MB         23.1MB        
+bah38/lab8-batoul_hachem:0.0.1.RELEASE   d69d879a87b4       94.6MB         23.1MB   U    
+bah38/lab8-batoul_hachem:0.0.2.RELEASE   8446b38571d2       94.5MB         23.1MB   U    
 

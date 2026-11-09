@@ -1,3 +1,4 @@
+param([switch]$ListOnly, [switch]$ImagesOnly)
 $ErrorActionPreference = 'Stop'
 Set-Location $PSScriptRoot
 $Host.UI.RawUI.WindowTitle = 'Lab 8 - Batoul Hachem - bah38'
@@ -23,10 +24,14 @@ function Save-Command([string]$Name, [string]$Command) {
     Start-Sleep -Seconds 2
     & "$PSScriptRoot/capture-screen.ps1" -OutputPath "$PSScriptRoot/evidence/$Name.png"
 }
-Save-Command '01-docker-ps' 'docker ps -a'
+if ($ImagesOnly) {
+    Save-Command '05-images' 'docker image ls --filter reference=bah38/lab8-batoul_hachem'
+    exit
+}
+Save-Command '01-docker-ps' 'docker ps -a --filter name=lab8-bah38'
+if ($ListOnly) { exit }
 Save-Command '02-docker-stop' 'docker stop lab8-bah38-hello'
 Save-Command '03-docker-logs' 'docker logs lab8-bah38-hello'
 Save-Command '04-stopped-container' 'docker ps -a --filter name=lab8-bah38-hello'
 Save-Command '05-images' 'docker image ls --filter reference=bah38/lab8-batoul_hachem'
-docker start lab8-bah38-hello | Out-Null
 'complete' | Set-Content evidence/capture-complete.txt

@@ -1,11 +1,11 @@
-GET http://localhost:5000/api/users -> 200: []
-POST http://localhost:5000/api/users/add -> 200: {"address": "Test address", "country": "Lebanon", "email": "lab8-test@example.invalid", "name": "Lab8 Test User", "phone": "00000000", "user_id": 1}
-GET http://localhost:5000/api/users/1 -> 200: {"address": "Test address", "country": "Lebanon", "email": "lab8-test@example.invalid", "name": "Lab8 Test User", "phone": "00000000", "user_id": 1}
-PUT http://localhost:5000/api/users/update -> 200: {"address": "Test address", "country": "Lebanon", "email": "lab8-test@example.invalid", "name": "Lab8 Updated User", "phone": "00000000", "user_id": 1}
-DELETE http://localhost:5000/api/users/delete/1 -> 200: {"status": "User deleted successfully"}
-GET http://localhost:5000/api/users -> 200: []
-GET http://localhost:3000/get_users -> 200: []
-GET http://localhost:3000/get_users -> 200: ["Lab8 Test User"]
-GET http://localhost:3000/get_users -> 200: ["Lab8 Updated User"]
-GET http://localhost:3000/get_users -> 200: []
-PASS: Lab 5 CRUD and port-3000 database-backed names; all test records removed.
+GET http://localhost:5000/api/users -> 200: [{"address": "Sample address", "country": "Lebanon", "email": "lab8-demo-1@example.invalid", "name": "Batoul Hachem", "phone": "00000000", "user_id": 1}, {"address": "Sample address", "country": "Lebanon", "email": "lab8-demo-2@example.invalid", "name": "Maya Haddad", "phone": "00000000", "user_id": 2}, {"address": "Sample address", "country": "Lebanon", "email": "lab8-demo-3@example.invalid", "name": "Omar Khalil", "phone": "00000000", "user_id": 3}]
+GET http://localhost:3000/get_users -> 200: ["Batoul Hachem", "Maya Haddad", "Omar Khalil"]
+POST http://localhost:5000/api/users/add -> 200: {"address": "Test address", "country": "Lebanon", "email": "lab8-test@example.invalid", "name": "Lab8 Test User", "phone": "00000000", "user_id": 4}
+GET http://localhost:3000/get_users -> 200: ["Batoul Hachem", "Maya Haddad", "Omar Khalil", "Lab8 Test User"]
+GET http://localhost:5000/api/users/4 -> 200: {"address": "Test address", "country": "Lebanon", "email": "lab8-test@example.invalid", "name": "Lab8 Test User", "phone": "00000000", "user_id": 4}
+PUT http://localhost:5000/api/users/update -> 200: {"address": "Test address", "country": "Lebanon", "email": "lab8-test@example.invalid", "name": "Lab8 Updated User", "phone": "00000000", "user_id": 4}
+GET http://localhost:3000/get_users -> 200: ["Batoul Hachem", "Maya Haddad", "Omar Khalil", "Lab8 Updated User"]
+DELETE http://localhost:5000/api/users/delete/4 -> 200: {"status": "User deleted successfully"}
+GET http://localhost:5000/api/users -> 200: [{"address": "Sample address", "country": "Lebanon", "email": "lab8-demo-1@example.invalid", "name": "Batoul Hachem", "phone": "00000000", "user_id": 1}, {"address": "Sample address", "country": "Lebanon", "email": "lab8-demo-2@example.invalid", "name": "Maya Haddad", "phone": "00000000", "user_id": 2}, {"address": "Sample address", "country": "Lebanon", "email": "lab8-demo-3@example.invalid", "name": "Omar Khalil", "phone": "00000000", "user_id": 3}]
+GET http://localhost:3000/get_users -> 200: ["Batoul Hachem", "Maya Haddad", "Omar Khalil"]
+PASS: Lab 5 CRUD and shared database names on port 3000; temporary test user removed.

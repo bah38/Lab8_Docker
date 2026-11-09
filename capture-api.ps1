@@ -16,8 +16,8 @@ Clear-Host
 Write-Host 'Lab 8 - Batoul Hachem (bah38)' -ForegroundColor Cyan
 Write-Host 'PS> docker ps --filter name=lab8-bah38' -ForegroundColor Yellow
 docker ps --filter name=lab8-bah38
-Write-Host 'PS> curl.exe http://localhost:5000/api/users' -ForegroundColor Yellow
-curl.exe --silent --show-error http://localhost:5000/api/users
+Write-Host 'PS> python demo_users.py  # add three sample users through POST on port 5000' -ForegroundColor Yellow
+python demo_users.py
 Write-Host 'PS> curl.exe http://localhost:3000/get_users' -ForegroundColor Yellow
 curl.exe --silent --show-error http://localhost:3000/get_users
 Write-Host 'PS> .\.venv\Scripts\python.exe verify_containers.py' -ForegroundColor Yellow

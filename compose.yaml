@@ -1,0 +1,25 @@
+services:
+  lab5-api:
+    build: ./lab5_api
+    image: bah38/lab8-batoul_hachem:0.0.1.RELEASE
+    container_name: lab8-bah38-api5000
+    ports:
+      - "127.0.0.1:5000:5000"
+    volumes:
+      - type: bind
+        source: ./runtime/database.db
+        target: /app/database.db
+        bind:
+          create_host_path: false
+  users-api:
+    build: ./users_api
+    image: bah38/lab8-batoul_hachem:0.0.2.RELEASE
+    container_name: lab8-bah38-api3000
+    ports:
+      - "127.0.0.1:3000:3000"
+    volumes:
+      - type: bind
+        source: ./runtime/database.db
+        target: /app/database.db
+        bind:
+          create_host_path: false
